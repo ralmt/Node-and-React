@@ -1,0 +1,39 @@
+{
+  "name": "reactnodeapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "server": "nodemon server.js",
+    "test": "mocha tests/*Tests.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "jest": "^29.6.1",
+    "mongoose": "^7.3.2",
+    "nodemon": "^2.0.22"
+  },
+  "nodemonConfig": {
+    "restartable": "rs",
+    "ignore": [
+      "node_modules/**/node_modules"
+    ],
+    "delay": "2500",
+    "env": {
+      "NODE_ENV": "development",
+      "PORT": 4000,
+      "MONGODB_URL": "mongodb://berto:longpass@freecluster.bw7dzz1.mongodb.net/"
+    }
+  },
+  "devDependencies": {
+    "mocha": "^10.2.0",
+    "should": "^13.2.3",
+    "sinon": "^15.2.0"
+  }
+}
